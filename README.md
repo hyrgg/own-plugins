@@ -2,7 +2,7 @@
 
 ## Installation
 
-https://hyrgg.github.io/stash-plugins/main/index.yml
+https://hyrgg.github.io/own-plugins/main/index.yml
 
 ## Plugin List
 
