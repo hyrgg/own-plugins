@@ -34,8 +34,8 @@
                 console.debug(a)
                 if (a && !a.classList.contains('open-media-player')) {
                     openMediaPlayerTask(a.href);
+                    break;
                 }
-                break;
             }
         });
     });
