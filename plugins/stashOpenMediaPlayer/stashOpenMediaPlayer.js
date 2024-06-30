@@ -19,15 +19,19 @@
         stash.runPluginTask("stashOpenMediaPlayer", "Open in Media Player", [{ "key": "path", "value": { "str": path } }, { "key": "mediaPlayerPath", "value": { "str": settings?.mediaPlayerPath } }]);
     }
     stash.openMediaPlayerTask = openMediaPlayerTask;
-
+    console.debug("222222")
     // scene filepath open with Media Player
     stash.addEventListener('page:scene', function () {
+        console.debug("11111")
         waitForElementClass('scene-file-info', function () {
             const translate_path = ['Path', '路径'];
             var a;
             for (var i = 0; i < translate_path.length; i++) {
+                console.debug("33333 "+ i)
                 var x_path = "//dt[text()='" + translate_path[i] + "']/following-sibling::dd/a";
+                console.debug(x_path)
                 a = getElementByXpath(x_path);
+                console.debug(a)
                 if (a && !a.classList.contains('open-media-player')) {
                     openMediaPlayerTask(a.href);
                 }
